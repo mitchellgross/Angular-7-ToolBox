@@ -1,0 +1,16 @@
+<div id="todoContainer">
+  <ol>
+    <li id="newItem">
+      <h2>Add something to do:</h2>
+      <button (click)="addItem()" class="itemCheck" title="Add to list">+</button>
+      <textarea id="newText" type="text"></textarea>
+    </li>
+  </ol>
+</div>
+<div id="preload">
+  <li class="listItem">
+    <button (click)="completeItem($event)" class="itemCheck" title="Mark as complete"><img src="../../assets/images/check.png" height="30px" width="30px"></button>
+    <p></p>
+    <button (click)="removeItem($event)" class="itemRemove" title="Remove from list"><img src="../../assets/images/remove.png" height="30px" width="30px"></button>
+  </li>
+</div>

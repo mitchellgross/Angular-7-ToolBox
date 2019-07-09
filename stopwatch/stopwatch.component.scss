@@ -1,0 +1,94 @@
+@import '../../variables.scss';
+#stopContainer{
+  width: 100%;
+  //padding-bottom: 50px;
+  background-color: $primary-color;
+  #modeContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      display: table;
+      color: white;
+      background-color: $secondary-color;
+      width: 50%;
+      margin: 4px;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      &:nth-of-type(1){
+        margin-right: 2px;
+      }
+      &:nth-of-type(2){
+        margin-left: 2px;
+      }
+      &:hover{
+        background-color: $hover;
+      }
+    }
+  }
+  #timeContainer{
+    width: 100%;
+    //height: 250px;
+    padding: 4px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    #wrapper{
+      display: table;
+      width: 100%;
+      background-color: white;
+      font-size: 42px;
+      padding: 25px;
+      text-align: center;
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;
+      input{
+        font-size: 35px;
+        width: 75px;
+      }
+    }
+  }
+  #buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      display: table;
+      color: white;
+      background-color: $secondary-color;
+      width: 200px;
+      margin: 4px;
+      padding: 15px;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+      &:nth-of-type(1){
+        background-color: $select-color;
+        margin-right: 2px;
+        &:hover{
+          background-color: $selectHover-color;
+        }
+      }
+      &:nth-of-type(2){
+        margin-left: 2px;
+      }
+      &:hover{
+        background-color: $hover;
+      }
+    }
+  }
+}
+
+.buttonSelected{
+  background-color: $hover !important;
+}

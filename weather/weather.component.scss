@@ -1,0 +1,105 @@
+@import '../../variables.scss';
+#weatherContainer{
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background-color: $primary-color;
+  #search{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: $primary-color;
+    button{
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background-color: black;
+      img{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        transform: scale(0.8);
+      }
+      &:hover{
+        background-color: #262626;
+      }
+    }
+    input{
+      display: inline-block;
+      top: 0px;
+      height: 40px;
+      width: calc(75% - 27px);
+      border: none;
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-size: 30px;
+      background-color: black;
+      border-left: 2px solid white;
+      &:nth-of-type(2){
+        width: calc(25% - 2px);
+        //margin-left: 15px;
+      }
+      &:focus{
+        outline:0;
+      }
+    }
+  }
+  #location{
+    margin-top: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #temp{
+    color: white;
+    font-size: 100px;
+    text-align: center;
+  }
+  #units{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-left: 10px;
+      margin-right: 10px;
+      button{
+        height: 40px;
+        width: 40px;
+        border: none;
+        border-radius: 50%;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background-color: $secondary-color;
+        &:hover{
+          background-color: $hover;
+        }
+        &:focus{
+          outline:0;
+        }
+      }
+      .btnSelected{
+        background-color: $select-color !important;
+        &:hover{
+          background-color: $selectHover-color !important;
+        }
+      }
+    }
+  }
+  #desc{
+    color: white;
+    font-size: 30px;
+    font-variant: small-caps;
+    text-align: center;
+  }
+  #icon{
+    display: flex;
+    justify-content: center;
+  }
+}

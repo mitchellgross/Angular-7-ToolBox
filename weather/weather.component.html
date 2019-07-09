@@ -1,0 +1,16 @@
+<div id="weatherContainer">
+  <div id="search">
+    <button (click)="saveCity()"><img src="../../assets/images/search.png"></button>
+    <input [(ngModel)]="city" (keydown)="pressEnter($event)" type="text" placeholder="City" />
+    <input [(ngModel)]="code" (keydown)="pressEnter($event)" type="text" placeholder="Code" />
+  </div>
+  <div id="location">{{weather.name}}, {{weather.sys.country}}</div>
+  <div id="temp">{{weather.main.temp}}</div>
+  <ol id="units">
+    <li><button (click)="convertUnits('far')" [ngClass]="{'btnSelected': unit == 'far'}" title="Fahrenheit">F</button></li>
+    <li><button (click)="convertUnits('cel')" [ngClass]="{'btnSelected': unit == 'cel'}" title="Celsius">C</button></li>
+    <li><button (click)="convertUnits('kel')" [ngClass]="{'btnSelected': unit == 'kel'}" title="Kelvin">K</button></li>
+  </ol>
+  <div id="desc">{{weather.weather[0].description}}</div>
+  <div id="icon"><img [src]="this.imgURL" /></div>
+</div>

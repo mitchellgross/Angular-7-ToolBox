@@ -1,0 +1,19 @@
+<div id="stopContainer">
+  <ul id="modeContainer">
+    <li [class.buttonSelected]="timerMode=='Stopwatch'" (click)="modeToStop()">Stopwatch</li>
+    <li [class.buttonSelected]="timerMode=='Countdown'" (click)="modeToCount()">Countdown</li>
+  </ul>
+  <div id="timeContainer">
+    <div *ngIf="timerMode=='Stopwatch'" id="wrapper">
+      <span *ngIf="curTimeMin>0">{{ curTimeMin }}:</span><span *ngIf="curTimeSec<=9">0</span>{{ curTimeSec }}.<span *ngIf="curTimeMil<=9">0</span>{{ curTimeMil }}
+    </div>
+    <div *ngIf="timerMode=='Countdown'" id="wrapper">
+      <input [(ngModel)]="inputMin" id="inputMinID" type="number" /><sub>M</sub> <input [(ngModel)]="inputSec" id="inputSecID" type="number" /><sub>S</sub>
+    </div>
+  </div>
+  <ul id="buttons">
+    <li *ngIf="startState=='Start'" (click)="start()">Start</li>
+    <li *ngIf="startState=='Pause'" (click)="pause()">Pause</li>
+    <li (click)="reset()">Reset</li>
+  </ul>
+</div>
